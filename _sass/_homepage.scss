@@ -1,0 +1,389 @@
+.hero {
+
+  @extend %flex;
+  @extend %flex-center;
+  @extend %flex-wrap;
+
+  position: relative;
+
+  @include breakpoint(small) {
+    display: block;
+  }
+
+  @include breakpoint(medium) {
+    height: 530px;
+    min-height: 100vmin;
+  }
+
+}
+
+
+.hero-image {
+
+  position: relative;
+
+  @include breakpoint(medium) {
+    background-image: url('../images/home/hero.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100%;
+    width: 100%;
+  }
+
+  .hero-logo {
+    padding: 2em;
+
+    @include breakpoint(small) {
+      background: -webkit-linear-gradient(297deg, $blue 0%, $blue 40%, darken($blue, 5%) 40%, darken($blue, 5%) 42%, $lavendar 42%, $lavendar 100%);
+      background: linear-gradient(153deg, $blue 0%, $blue 40%, darken($blue, 5%) 40%, darken($blue, 5%) 42%, $lavendar 42%, $lavendar 100%);
+    }
+
+    @include breakpoint(medium) {
+      background: none;
+      bottom: 2em;
+      left: 2em;
+      padding: 0;
+      position: absolute;
+    }
+
+    svg {
+      height: 6em;
+
+      @include breakpoint(small) {
+        height: 4em;
+      }
+    }
+  }
+}
+
+.hero-side {
+
+  @extend %flex;
+  @extend %flex-center;
+
+  background: $blue-light;
+
+  @include breakpoint(medium) {
+    background: rgba($purple, .9);
+    min-height: 100vmin;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50%;
+  }
+
+  @include breakpoint(large) {
+    max-width: 500px;
+    width: 39%;
+  }
+
+  form {
+    margin: 1em 0;
+    text-align: center;
+  }
+
+  .email {
+    border: 0;
+    border-radius: 2em;
+    color: $text-color;
+    font-size: 1em;
+    margin-bottom: 1em;
+    max-width: 400px;
+    padding: .25em .76em;
+    width: 100%;
+  }
+}
+
+.hero-side-inner {
+  color: $white;
+  padding: 2em;
+  width: 100%;
+}
+
+.hero-heading {
+  font-size: 1.3em;
+  font-weight: 700;
+}
+
+.page-main {
+  section {
+    min-height: calc(100vmin - 2em);
+    overflow: hidden;
+    padding: 2em 0;
+    position: relative;
+    z-index: 0;
+  }
+}
+
+.bg-about {
+  background-blend-mode: screen;
+  background-color: $purple;
+  background-image: url('../images/home/photo1.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: $white;
+}
+
+.corner {
+  bottom: -300px;
+  box-shadow: -4px -5px 0 rgba($black, .25);
+  height: 400px;
+  position: absolute;
+  right: -281px;
+  transform: rotate(-20deg);
+  width: 800px;
+  z-index: -1;
+
+  @include breakpoint(large) {
+    bottom: -202px;
+    transform: rotate(-27deg);
+  }
+
+}
+
+.corner-blue {
+  background: $blue;
+}
+
+.corner-blue-light {
+  background: $blue-light;
+}
+
+.corner-purple {
+  background: $purple;
+}
+
+.corner-purple-light {
+  background: $purple-light;
+}
+
+.corner-button {
+  position: relative;
+  z-index: 100;
+
+  @include breakpoint(large) {
+    bottom: 50px;
+    position: absolute;
+    right: 50px;
+  }
+}
+
+.images {
+  @extend %flex;
+  @extend %flex-center;
+}
+
+.image2,
+.image3,
+.image4,
+.image5 {
+  background-blend-mode: screen;
+  background-color: $blue;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 50vmin;
+
+  @include breakpoint(medium) {
+    min-height: 100vmin;
+  }
+}
+
+.image2 {
+  background-image: url('../images/home/photo2.jpg');
+  width: 100%;
+
+  @include breakpoint(medium) {
+    width: 66.66%;
+  }
+}
+
+.image3 {
+  background-image: url('../images/home/photo3.jpg');
+  background-position: right;
+  display: none;
+
+  @include breakpoint(medium) {
+    display: block;
+    width: 33.33%;
+  }
+}
+
+.image4 {
+  background-image: url('../images/home/photo4.jpg');
+  width: 100%;
+
+  @include breakpoint(medium) {
+    width: 66.66%;
+  }
+}
+
+.image5 {
+  background-image: url('../images/home/photo5.jpg');
+  display: none;
+
+  @include breakpoint(medium) {
+    display: block;
+    width: 33.33%;
+  }
+}
+
+.promo-wrapper {
+  height: 50vmin;
+
+  @include breakpoint(small) {
+    margin-bottom: 2em;
+  }
+
+  @include breakpoint(medium) {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -99;
+  }
+}
+
+.promo {
+  height: 100%;
+  width: 100%;
+}
+
+
+.social {
+  @extend %flex-center;
+
+  @extend %flex-space-between;
+
+  margin: 2em auto 0;
+  max-width: 300px;
+}
+
+.link-social {
+  @extend %flex-center;
+
+  background: $teal;
+  border-radius: 100%;
+  height: 2.75em;
+  width: 2.75em;
+
+  svg {
+    display: block;
+    width: 45%;
+  }
+
+  &:hover {
+    background: darken($teal, 10);
+  }
+}
+
+.icon-location {
+  text-align: center;
+
+  svg {
+    display: inline-block;
+    height: 2em;
+  }
+}
+
+.map {
+  background: rgba($blue, .5);
+  border: 0;
+  height: 300px;
+  margin-top: 1em;
+
+  @include breakpoint(medium) {
+    height: 500px;
+  }
+}
+
+// scss-lint:disable ImportantRule
+.vmin50 {
+  min-height: calc(50vmin - 2em) !important;
+}
+
+.all-sponsors {
+
+  .sponsor-group {
+    margin-bottom: 2em;
+    margin-top: 1em;
+  }
+
+  .partner-img {
+    display: block;
+    margin-bottom: 1em;
+    margin-right: 1.5em;
+
+    &:hover {
+      opacity: .8;
+    }
+  }
+
+  svg {
+    display: block;
+    height: 40px;
+  }
+
+  .sponsor-signature-sponsor svg {
+    max-width: 250px;
+  }
+
+  .sponsor-ecosystem-supporter svg {
+    max-width: 225px;
+  }
+
+  .sponsor-networking-event-sponsor svg {
+    max-width: 200px;
+  }
+
+  .sponsor-conference-supporter svg {
+    max-width: 175px;
+  }
+
+  .sponsor-community-builder svg {
+    max-width: 150px;
+  }
+
+  .sponsor-friend-of-ela svg,
+  .sponsor-in-kind svg {
+    max-width: 140px;
+  }
+}
+
+
+.ad {
+  @extend %flex;
+  @extend %flex-nowrap;
+  @extend %flex-center-y;
+
+  background-color: $blue;
+  border-radius: .25em;
+  color: $white;
+  margin-bottom: 1.5em;
+  padding: 1em 1.5em;
+
+  p {
+    margin-bottom: 0;
+
+    @include breakpoint(medium) {
+      margin-left: 1em;
+    }
+
+  }
+
+  a {
+    color: $white;
+    text-decoration: underline;
+
+    &:hover {
+      color: darken($white, 15%);
+    }
+  }
+
+  svg {
+    display: block;
+    flex-shrink: 0;
+    height: 50px;
+    width: 50px;
+  }
+}

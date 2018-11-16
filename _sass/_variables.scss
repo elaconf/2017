@@ -1,0 +1,25 @@
+$max-width: 700px;
+
+$body-bg: #fff;
+$text-color: #263d83;
+$light: #fff;
+$white: #fff;
+$black: #000;
+
+// COLOR PALETTE
+$blue: #263d83;
+$blue-light: #4480fd;
+$purple: #794d9a;
+$purple-light: #9f76ff;
+$green: #80ddae;
+$teal: #1fdce5;
+$lavendar: #7781f6;
+
+$link-color: darken($blue-light, 10);
+$link-hover: darken($link-color, 20);
+$button-color: $purple-light;
+$border-color: $purple-light;
+$footer-bg: $blue;
+
+$font-headings: 'Questrial', sans-serif;
+$font-body: 'Open Sans', sans-serif;

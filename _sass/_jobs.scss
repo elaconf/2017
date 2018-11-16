@@ -1,0 +1,24 @@
+.job {
+  @extend %flex;
+  @extend %flex-center-y;
+
+  margin-bottom: 1em;
+
+  .job-image {
+    margin-right: 1em;
+
+    @include breakpoint(medium) {
+      svg {
+        width: 100px;
+      }
+    }
+
+    @include breakpoint(small) {
+      svg {
+        width: 50px;
+      }
+    }
+  }
+}
+
+

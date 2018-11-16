@@ -1,0 +1,80 @@
+title: Ela Conf
+url: http://elaconf.com
+baseurl: '/2017'
+location: "Philadelphia, Pennsylvania"
+mission: "A safe, inclusive tech leadership conference and community for adult (18+) women (cis and trans), trans men, and genderqueer people to connect with and empower one another."
+tagline: Empowering more marginalized individuals to be leaders in tech.
+
+author:
+  name: Ela Conf
+  email: hello@elaconf.com
+  uri: http://elaconf.com
+
+repository: elaconf/elaconf.github.io
+modernizr: 2.8.3
+jquery: 2.2.3
+permalink: /:categories/:title/
+
+sass:
+  style: :compressed
+
+twitter: https://www.twitter.com/elaconf
+email: hello@elaconf.com
+slack: https://docs.google.com/forms/d/e/1FAIpQLSctRXPSgQaXHkawUB2gP8NR0w41KsAbZit8AZr4q19swxQ50A/viewform
+youtube: https://www.youtube.com/channel/UCrOaNE6f1r6Xrgmpq3UzcIA
+medium: https://medium.com/@elaconf
+instagram: https://www.instagram.com/ela_community/
+newsletter: http://elaconf.us11.list-manage1.com/subscribe?u=35575c3d011d3489cb7c3c214&id=e88ae52852
+
+future: true
+
+collections:
+  organizers:
+    output: true
+    permalink: /organizers/:path/
+  speakers:
+    output: true
+    permalink: /speakers/:path/
+  agenda:
+    output: true
+    permalink: /agenda/:title/
+
+defaults:
+  - scope:
+      path: ""
+      type: "organizers"
+    values:
+      layout: "speaker"
+      category: "organizers"
+      topic: Organizer
+  - scope:
+      path: ""
+      type: "speakers"
+    values:
+      layout: "speaker"
+      category: "speakers"
+      topic: Speaker
+      order: 100
+  - scope:
+      path: ""
+      type: "agenda"
+    values:
+      layout: "agenda"
+      category: "agenda"
+      topic: Agenda
+
+exclude:
+- Gemfile
+- README.md
+- package.json
+- CNAME
+- node_modules
+- bin
+- test
+
+plugins:
+- jemoji
+- jekyll-redirect-from
+- jekyll-sitemap
+
+token: pk.eyJ1Ijoia2F0eWRlY29yYWgiLCJhIjoiY2lwOGJsbjR2MDBweGVhbnJyOHUxd3BmciJ9.RmDyfo38D_xPFdDst05n-g

@@ -1,0 +1,17 @@
+.sponsors {
+  @extend %flex;
+  @extend %flex-wrap;
+  //@extend %flex-space-between;
+
+  margin: 2em 0 3em;
+}
+
+.sponsor {
+  display: block;
+  margin-right: 2em;
+
+  svg {
+    height: 50px;
+    margin: 0 1em 1em 0;
+  }
+}

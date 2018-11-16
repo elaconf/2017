@@ -1,0 +1,72 @@
+@include breakpoint(small) {
+
+  .eight,
+  .seven,
+  .sixth {
+    width: 50%;
+  }
+
+  .third,
+  .five {
+    width: 100%;
+  }
+
+}
+
+// scss-lint:disable ImportantRule
+.grid {
+  @extend %flex;
+  @extend %flex-center;
+  @extend %flex-wrap;
+
+  @include breakpoint(small) {
+    display: block !important;
+  }
+}
+
+@include breakpoint(medium) {
+
+  .eight,
+  .seven,
+  .sixth,
+  .third {
+    width: (100% / 3);
+  }
+
+  .half,
+  .fourth,
+  .five,
+  .two-thirds {
+    width: 50%;
+  }
+
+}
+
+
+@include breakpoint(large) {
+
+  .eight {
+    width: (100% / 8);
+  }
+
+  .seven {
+    width: (100% / 7);
+  }
+
+  .sixth {
+    width: (100% / 6);
+  }
+
+  .five {
+    width: (100% / 5);
+  }
+
+  .fourth {
+    width: 25%;
+  }
+
+  .two-thirds {
+    width: 66.66%;
+  }
+
+}
